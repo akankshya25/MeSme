@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeMe - Sale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sale-container {
+            padding: 20px;
+        }
+        .sale-section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .sale-category-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .sale-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+        }
+        .sale-links li {
+            margin-bottom: 5px;
+        }
+        .sale-links li a {
+            color: #007bff;
+            text-decoration: none;
+            display: block;
+            padding: 8px 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .sale-links li a:hover {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .top-brands-section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-brands-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .top-brands-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-brands-list li {
+            margin-right: 10px;
+        }
+
+        .top-brands-list li a {
+            color: #007bff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .top-brands-list li a:hover {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="sale-container container mt-4">
+        <h1 class="text-center mb-4">Sale</h1>
+
+        <div class="sale-section">
+            <h2 class="sale-category-title">Featured Sales</h2>
+            <ul class="sale-links">
+                <li><a href="#">Biggest Sale Ever</a></li>
+                <li><a href="#">Diwali Dhamaka</a></li>
+                <li><a href="#">Summer Sale</a></li>
+                <li><a href="#">Monsoon Mania</a></li>
+                <li><a href="#">End of Season Sale</a></li>
+            </ul>
+        </div>
+
+        <div class="sale-section">
+            <h2 class="sale-category-title">Shop by Category</h2>
+            <ul class="sale-links">
+                <li><a href="#">Skin Care</a></li>
+                <li><a href="#">Hair Care</a></li>
+                <li><a href="#">Makeup</a></li>
+                <li><a href="#">Fragrances</a></li>
+                <li><a href="#">Bath & Body</a></li>
+                <li><a href="#">Mom & Baby</a></li>
+                <li><a href="#">Health & Wellness</a></li>
+                <li><a href="#">Men's Grooming</a></li>
+            </ul>
+        </div>
+
+        <div class="sale-section">
+            <h2 class="sale-category-title">Shop by Discount</h2>
+            <ul class="sale-links">
+                <li><a href="#">Under 10% Off</a></li>
+                <li><a href="#">10% - 30% Off</a></li>
+                <li><a href="#">30% - 50% Off</a></li>
+                <li><a href="#">50% - 70% Off</a></li>
+                <li><a href="#">Above 70% Off</a></li>
+            </ul>
+        </div>
+
+        <div class="top-brands-section">
+            <h2 class="top-brands-title">Top Brands on Sale</h2>
+            <ul class="top-brands-list">
+                <li><a href="#">Brand A</a></li>
+                <li><a href="#">Brand B</a></li>
+                <li><a href="#">Brand C</a></li>
+                <li><a href="#">Brand D</a></li>
+                <li><a href="#">Brand E</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeMe - Hair Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .haircare-container {
+            padding: 20px;
+        }
+        .haircare-section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .haircare-category-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .haircare-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+            gap: 10px;
+        }
+        .haircare-links li {
+            margin-bottom: 5px;
+        }
+        .haircare-links li a {
+            color: #007bff;
+            text-decoration: none;
+            display: block;
+            padding: 8px 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .haircare-links li a:hover {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .top-brands-section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .top-brands-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .top-brands-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-brands-list li {
+            margin-right: 10px;
+        }
+
+        .top-brands-list li a {
+            color: #007bff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .top-brands-list li a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        .trending-searches-section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .trending-searches-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .trending-searches-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .trending-searches-list li {
+            margin-right: 10px;
+        }
+
+        .trending-searches-list li a {
+            color: #007bff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .trending-searches-list li a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="haircare-container container mt-4">
+        <h1 class="text-center mb-4">Hair Care</h1>
+
+        <div class="haircare-section">
+            <h2 class="haircare-category-title">Hair Care</h2>
+            <ul class="haircare-links">
+                <li><a href="#">Shampoo</a></li>
+                <li><a href="#">Dry Shampoo</a></li>
+                <li><a href="#">Conditioner</a></li>
+                <li><a href="#">Hair Oil</a></li>
+                <li><a href="#">Hair Serum</a></li>
+                <li><a href="#">Hair Creams & Masks</a></li>
+                <li><a href="#">Hair Supplements</a></li>
+                <li><a href="#">Leave-in Conditioner</a></li>
+            </ul>
+        </div>
+
+        <div class="haircare-section">
+            <h2 class="haircare-category-title">Tools & Accessories</h2>
+            <ul class="haircare-links">
+                <li><a href="#">Hair Brushes</a></li>
+                <li><a href="#">Hair Combs</a></li>
+                <li><a href="#">Dryers & Stylers</a></li>
+                <li><a href="#">Straighteners</a></li>
+                <li><a href="#">Rollers & Curlers</a></li>
+                 <li><a href="#">Hair Extensions</a></li>
+                  <li><a href="#">Hair Accessories</a></li>
+            </ul>
+        </div>
+
+        <div class="haircare-section">
+            <h2 class="haircare-category-title">Hair Styling</h2>
+            <ul class="haircare-links">
+                <li><a href="#">Hair Color</a></li>
+                <li><a href="#">Hair Spray</a></li>
+                <li><a href="#">Gels & Waxes</a></li>
+                 <li><a href="#">Shop By Hair Type</a></li>
+                  <li><a href="#">Straight</a></li>
+                   <li><a href="#">Curly & Wavy</a></li>
+            </ul>
+        </div>
+
+        <div class="haircare-section">
+            <h2 class="haircare-category-title">Shop By Concern</h2>
+            <ul class="haircare-links">
+                <li><a href="#">Hairfall & Thinning</a></li>
+                <li><a href="#">Dandruff</a></li>
+                <li><a href="#">Dry & Frizzy Hair</a></li>
+                <li><a href="#">Split Ends</a></li>
+                <li><a href="#">Color Protection</a></li>
+                <li><a href="#">Damaged Hair</a></li>
+                 <li><a href="#">Hair Growth</a></li>
+                  <li><a href="#">Curl Enhancing</a></li>
+                   <li><a href="#">Volume</a></li>
+                    <li><a href="#">Length & Shine</a></li>
+                     <li><a href="#">Bond Building</a></li>
+            </ul>
+        </div>
+
+        <div class="top-brands-section">
+            <h2 class="top-brands-title">Top Brands</h2>
+            <ul class="top-brands-list">
+                <li><a href="#">Nykaa Naturals</a></li>
+                <li><a href="#">L'Oreal Paris</a></li>
+                <li><a href="#">Wella Professionals</a></li>
+                <li><a href="#">L'Oreal Professionnel</a></li>
+                <li><a href="#">BBlunt</a></li>
+                <li><a href="#">Herbal Essences</a></li>
+                <li><a href="#">Schwarzkopf Professional</a></li>
+            </ul>
+        </div>
+
+        <div class="haircare-section">
+            <h2 class="haircare-category-title">Hair Kits & Combos</h2>
+            <ul class="haircare-links">
+                <li><a href="#">Hair Kits</a></li>
+                <li><a href="#">Hair Combos</a></li>
+            </ul>
+        </div>
+
+        <div class="trending-searches-section">
+            <h2 class="trending-searches-title">Trending Searches</h2>
+            <ul class="trending-searches-list">
+                <li><a href="#">Hair Growth Oil</a></li>
+                <li><a href="#">Dandruff Shampoo</a></li>
+                <li><a href="#">Castor Oil For Hair</a></li>
+                <li><a href="#">Sulphate Free Shampoo</a></li>
+                 <li><a href="#">Hair Straightener Brush</a></li>
+            </ul>
+        </div>
+
+        <div class="haircare-section">
+            <h2 class="haircare-category-title">Professional Brands</h2>
+            <ul class="haircare-links">
+               <li><a href="#">Professional</a></li>
+            </ul>
+        </div>
+
+         <div class="haircare-section">
+            <h2 class="haircare-category-title">Luxury Brand</h2>
+            <ul class="haircare-links">
+               <li><a href="#">Luxury Brand</a></li>
+            </ul>
+        </div>
+
+        <div class="haircare-section">
+            <h2 class="haircare-category-title">Quick Links</h2>
+            <ul class="haircare-links">
+               <li><a href="#">Hair Combos</a></li>
+                <li><a href="#">New Launches</a></li>
+                 <li><a href="#">NFBA Nominees 2022</a></li>
+                  <li><a href="#">Herbal Hair Care</a></li>
+                   <li><a href="#">The Gift Store</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

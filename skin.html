@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeMe - Skin Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .skincare-container {
+            padding: 20px;
+        }
+        .skincare-section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .skincare-category-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .skincare-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid layout */
+            gap: 10px;
+        }
+        .skincare-links li {
+            margin-bottom: 5px;
+        }
+        .skincare-links li a {
+            color: #007bff;
+            text-decoration: none;
+            display: block;
+            padding: 8px 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .skincare-links li a:hover {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .trending-searches-section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .trending-searches-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .trending-searches-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .trending-searches-list li {
+            margin-right: 10px;
+        }
+
+        .trending-searches-list li a {
+            color: #007bff;
+            text-decoration: none;
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .trending-searches-list li a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .specialized-skincare-section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .specialized-skincare-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="skincare-container container mt-4">
+        <h1 class="text-center mb-4">Skin Care</h1>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Moisturizers</h2>
+            <ul class="skincare-links">
+                <li><a href="#">Face Moisturizer & Day Cream</a></li>
+                <li><a href="#">Night Cream</a></li>
+                <li><a href="#">Face Oils</a></li>
+                <li><a href="#">All Purpose Gels/Creams</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Serums</h2>
+            <ul class="skincare-links">
+                <li><a href="#">Serums & Essence</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Cleansers</h2>
+            <ul class="skincare-links">
+                <li><a href="#">Face Wash</a></li>
+                <li><a href="#">Cleanser</a></li>
+                <li><a href="#">Micellar Water</a></li>
+                <li><a href="#">Face Wipes</a></li>
+                <li><a href="#">Makeup Remover</a></li>
+                <li><a href="#">Scrubs & Exfoliators</a></li>
+            </ul>
+        </div>
+
+        <div class="trending-searches-section">
+            <h2 class="trending-searches-title">Trending Searches</h2>
+            <ul class="trending-searches-list">
+                <li><a href="#">Toners Under 1000</a></li>
+                <li><a href="#">Face Wash For Oily Skin</a></li>
+                <li><a href="#">Oil Free Face Moisturizers</a></li>
+                <li><a href="#">Lip Balm Under 500</a></li>
+                <li><a href="#">Vitamin C Serum</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Masks</h2>
+            <ul class="skincare-links">
+                <li><a href="#">Sheet Masks</a></li>
+                <li><a href="#">Sleeping Masks</a></li>
+                <li><a href="#">Masks & Peels</a></li>
+                 <li><a href="#">Face Packs</a></li>
+                  <li><a href="#">Face Bleach</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Toners</h2>
+            <ul class="skincare-links">
+                 <li><a href="#">Toners</a></li>
+                  <li><a href="#">Toners & Mists</a></li>
+                   <li><a href="#">Rose Water</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Body Care</h2>
+            <ul class="skincare-links">
+                <li><a href="#">Lotions & Creams</a></li>
+                <li><a href="#">Body Butter</a></li>
+                <li><a href="#">Massage Oils</a></li>
+                <li><a href="#">Shower Gels & Body Wash</a></li>
+                <li><a href="#">Soaps</a></li>
+                <li><a href="#">Scrubs & Loofahs</a></li>
+                <li><a href="#">Bath Salts</a></li>
+
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Hands & Feet</h2>
+            <ul class="skincare-links">
+                <li><a href="#">Hand Creams</a></li>
+                <li><a href="#">Foot Creams</a></li>
+                <li><a href="#">Hand & Foot Masks</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">CSMS By Nykaa</h2>
+            <ul class="skincare-links">
+               <li><a href="#">CSMS By Nykaa</a></li>
+            </ul>
+        </div>
+
+        <div class="specialized-skincare-section">
+            <h2 class="specialized-skincare-title">Specialised Skincare</h2>
+            <ul class="skincare-links">
+                <li><a href="#">Acne Spot Correctors</a></li>
+                <li><a href="#">Nose Strips</a></li>
+                <li><a href="#">Facial Peels</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Eye Care</h2>
+            <ul class="skincare-links">
+                <li><a href="#">Under Eye Cream & Serums</a></li>
+                <li><a href="#">Eye Masks</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Lip Care</h2>
+            <ul class="skincare-links">
+                <li><a href="#">Lip Balm</a></li>
+                <li><a href="#">Lip Scrubs</a></li>
+                <li><a href="#">Lip Masks</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Sun Care</h2>
+            <ul class="skincare-links">
+                <li><a href="#">Face Sunscreen</a></li>
+                <li><a href="#">Body Sunscreen</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Kits & Combos</h2>
+            <ul class="skincare-links">
+                <li><a href="#">Facial Kits</a></li>
+                <li><a href="#">Combos @ Nykaa</a></li>
+                <li><a href="#">Gift Sets</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Skin Tools</h2>
+            <ul class="skincare-links">
+                <li><a href="#">Face Massagers</a></li>
+                <li><a href="#">Cleansing Brushes</a></li>
+                <li><a href="#">Blackhead Remover</a></li>
+                 <li><a href="#">Derma rollers</a></li>
+            </ul>
+        </div>
+
+         <div class="skincare-section">
+            <h2 class="skincare-category-title">Skin Supplements</h2>
+            <ul class="skincare-links">
+                 <li><a href="#">Vitamins & Minerals</a></li>
+                  <li><a href="#">Ayurvedic Herbs</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">New Launches</h2>
+            <ul class="skincare-links">
+               <li><a href="#">New Launches</a></li>
+            </ul>
+        </div>
+
+         <div class="skincare-section">
+            <h2 class="skincare-category-title">Neck Creams</h2>
+            <ul class="skincare-links">
+               <li><a href="#">Neck Creams</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Quick Links</h2>
+            <ul class="skincare-links">
+                 <li><a href="#">NFBA Nominees 2022</a></li>
+                  <li><a href="#">The Gift Store</a></li>
+            </ul>
+        </div>
+
+        <div class="skincare-section">
+            <h2 class="skincare-category-title">Shop By Concern</h2>
+            <ul class="skincare-links">
+                <li><a href="#">Acne</a></li>
+                <li><a href="#">Dull Skin</a></li>
+                <li><a href="#">Pigmentation</a></li>
+                <li><a href="#">Wrinkles & Fine Lines</a></li>
+                <li><a href="#">Pores</a></li>
+                <li><a href="#">Dark Spots</a></li>
+                <li><a href="#">Face Tan</a></li>
+                 <li><a href="#">Oil Control</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

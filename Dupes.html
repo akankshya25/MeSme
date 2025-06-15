@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MeSMe - High-End Beauty Dupes</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff8f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #e91e63;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    #searchBar {
+      padding: 10px;
+      width: 60%;
+      max-width: 500px;
+      font-size: 16px;
+      margin-top: 15px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    #dupeList {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .dupeCard {
+      background-color: white;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    .dupeCard:hover {
+      transform: translateY(-5px);
+    }
+
+    .dupeCard img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .dupeCard h3 {
+      color: #e91e63;
+      margin-bottom: 8px;
+    }
+
+    .dupeCard p {
+      margin: 5px 0;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      background-color: #e91e63;
+      color: white;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #ffeaf1;
+      color: #555;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MeSMe - High-End Beauty Dupes</h1>
+    <input type="text" id="searchBar" placeholder="Search high-end product or category...">
+  </header>
+
+  <section id="dupeList">
+    <!-- Dupes will be loaded here -->
+  </section>
+
+  <footer>
+    &copy; 2025 MeSMe | Created with 💄 for beauty lovers
+  </footer>
+
+  <script>
+    const dupes = [
+      {
+        highEnd: "Huda Beauty Foundation",
+        dupe: "Maybelline Fit Me Foundation",
+        price: "₹549",
+        category: "Foundation",
+        image: "https://i.imgur.com/J7pRUJd.jpg",
+        buy: "https://www.maybelline.co.in/face/foundation/fit-me-matte-poreless-foundation"
+      },
+      {
+        highEnd: "MAC Ruby Woo Lipstick",
+        dupe: "Maybelline Red Revival",
+        price: "₹299",
+        category: "Lipstick",
+        image: "https://i.imgur.com/DKUhDNN.jpg",
+        buy: "https://www.maybelline.co.in/lips/lipstick/color-sensational-creamy-matte-lipstick"
+      },
+      {
+        highEnd: "Benefit POREfessional Primer",
+        dupe: "Lakme Blur Perfect Primer",
+        price: "₹499",
+        category: "Primer",
+        image: "https://i.imgur.com/BaRstUi.jpg",
+        buy: "https://www.lakmeindia.com/products/lakme-absolute-blur-perfect-makeup-primer"
+      },
+      {
+        highEnd: "Fenty Gloss Bomb",
+        dupe: "NYX Butter Gloss",
+        price: "₹349",
+        category: "Lip Gloss",
+        image: "https://i.imgur.com/YRtOtgh.jpg",
+        buy: "https://www.nykaa.com/nyx-professional-makeup-butter-gloss/p/30883"
+      },
+      {
+        highEnd: "Charlotte Tilbury Magic Cream",
+        dupe: "Nivea Soft Cream",
+        price: "₹190",
+        category: "Moisturizer",
+        image: "https://i.imgur.com/bJCDXjR.jpg",
+        buy: "https://www.nykaa.com/nivea-soft-light-moisturizer-for-face-hands-body/p/10449"
+      },
+      {
+        highEnd: "Too Faced Better Than Sex Mascara",
+        dupe: "L'Oréal Lash Paradise Mascara",
+        price: "₹599",
+        category: "Mascara",
+        image: "https://i.imgur.com/Jk2JbyH.jpg",
+        buy: "https://www.lorealparis.co.in/makeup/eyes/mascara/voluminous-lash-paradise-mascara"
+      },
+      {
+        highEnd: "Anastasia Beverly Hills Brow Wiz",
+        dupe: "Miss Claire Waterproof Eyebrow Pencil",
+        price: "₹85",
+        category: "Eyebrow",
+        image: "https://i.imgur.com/ldH7cTf.jpg",
+        buy: "https://www.nykaa.com/miss-claire-waterproof-eyebrow-pencil/p/7686"
+      },
+      {
+        highEnd: "Tarte Shape Tape Concealer",
+        dupe: "Maybelline Instant Age Rewind",
+        price: "₹620",
+        category: "Concealer",
+        image: "https://i.imgur.com/BmUYO2H.jpg",
+        buy: "https://www.maybelline.co.in/face/concealer/instant-age-rewind"
+      }
+    ];
+
+    function displayDupes(filter = "") {
+      const list = document.getElementById("dupeList");
+      list.innerHTML = "";
+
+      const filtered = dupes.filter(item =>
+        item.highEnd.toLowerCase().includes(filter.toLowerCase()) ||
+        item.category.toLowerCase().includes(filter.toLowerCase())
+      );
+
+      if (filtered.length === 0) {
+        list.innerHTML = "<p>No dupes found for your search.</p>";
+        return;
+      }
+
+      filtered.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "dupeCard";
+        card.innerHTML = `
+          <img src="${item.image}" alt="${item.highEnd}">
+          <h3>${item.highEnd}</h3>
+          <p><strong>Dupe:</strong> ${item.dupe}</p>
+          <p><strong>Price:</strong> ${item.price}</p>
+          <p><strong>Category:</strong> ${item.category}</p>
+          <a href="${item.buy}" class="buy-btn" target="_blank">Buy Now</a>
+        `;
+        list.appendChild(card);
+      });
+    }
+
+    document.getElementById("searchBar").addEventListener("input", (e) => {
+      displayDupes(e.target.value);
+    });
+
+    displayDupes(); // Initial load
+  </script>
+
+</body>
+</html>

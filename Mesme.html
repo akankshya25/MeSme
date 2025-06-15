@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    "<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>"
+    </head>
+    
+  <style>
+    body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for the SALE badge if needed */
+        .sale-badge {
+            background-color: #ef4444; /* Red-500 */
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem; /* text-xs */
+            font-weight: bold;
+            margin-left: 4px;
+        }
+        .search-icon-btn {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #9ca3af; /* gray-400 */
+        }
+        .search-input {
+            padding-left: 35px !important; /* Ensure space for icon */
+        }
+        .hero-banner {
+            background: linear-gradient(to right, #fbcfe8, #fce7f3); /* pink-200 to pink-100 */
+        }
+        .hero-banner img {
+            max-width: 300px; /* Adjust as needed */
+            object-fit: contain;
+        }
+        /* Mobile menu styles */
+        .mobile-menu {
+            display: none;
+        }
+        @media (max-width: 1024px) { /* lg breakpoint */
+            .desktop-nav {
+                display: none;
+            }
+            .mobile-menu-button-container {
+                display: flex;
+            }
+            /* JavaScript will toggle this */
+            .mobile-menu.active {
+                display: block;
+            }
+        }
+        @media (min-width: 1025px) {
+        .mobile-menu-button-container {
+                display: none;
+            }
+        }
+    .btn-pink {
+    background-color: #e91e63;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+  }
+  .btn-pink:hover {
+    background-color: #d81b60;
+  }
+
+ /* Wrapper section */
+.category-section {
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.category-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1c1c1c;
+  margin-bottom: 0.2rem;
+}
+
+.category-section p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.category-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  scrollbar-width: none;
+}
+
+.category-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Category Card */
+.category-card {
+  min-width: 110px;
+  max-width: 120px;
+  background: linear-gradient(to top right, #fff0f0, #ffeaea);
+  border-radius: 20px;
+  padding: 1rem 0.5rem;
+  text-align: center;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+  position: relative;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Icon/image */
+.category-card img {
+  height: 70px;
+  margin-bottom: 0.5rem;
+  object-fit: contain;
+}
+
+/* Title text */
+.category-card .title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #d81b60;
+  margin-bottom: 0.2rem;
+}
+
+/* Arrow icon */
+.category-card .arrow {
+  position: absolute;
+  bottom: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: #666;
+}
+.category-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 20px;
+    }
+    .category-button {
+      background-color: #f8f9fa;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+    .category-button a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: 500;
+    }
+
+
+</style>
+</head>
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="Mesme.html">
+      <img src="mesme logo.png" alt="MesMe" height="30">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="[Link to Categories Page]">Categories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="brands.html">Brands</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="[Link to Luxe Page]">Luxe</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="[Link to MeMe Fashion Page]">MeMe Fashion</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="[Link to Beauty Advice Page]">Beauty Advice</a>
+        </li>
+      </ul>
+      <form class="d-flex me-3">
+        <div class="input-group">
+          <input class="form-control border-end-0" type="search" placeholder="Search on MeSMe" aria-label="Search">
+          <span class="input-group-text bg-white border-start-0"><i class="bi bi-search"></i></span>
+        </div>
+      </form>
+      <a href="Signin.html" class="btn btn-danger me-3">Sign In</a>
+      <a href="" class="nav-link">
+        <i class="bi bi-bag fs-5"></i>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="makeup.html">Makeup</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="skin.html">Skin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="hair.html">Hair</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="appliances.html">Appliances</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="bath and body.html">Bath & Body</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="natural.html">Natural</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="mom and baby.html">Mom & Baby</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="health and wellness.html">Health & Wellness</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="men.html">Men</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="fragrance.html">Fragrance</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="lingerie and assesories.html">Lingerie & Accessories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Dupes.html">Dupes of high-end products</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link bg-danger text-white rounded" href="" style="padding: 0.5rem 1rem;">SALE</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+    <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="image 2.jpg" class="d-block w-100" alt="image 2.jpg">
+      </div>
+      <div class="carousel-item">
+        <img src="image 4.jpg" class="d-block w-100" alt="image 4.jpg">
+      </div>
+      <div class="carousel-item">
+        <img src="image 5.jpg" class="d-block w-100" alt="image 5.jpg">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  <div class="container text-center mt-5">
+    <h1>Welcome to MeSMe</h1>
+    <p class="text-muted">We are here with luxury brands.</p>
+  </div>
+
+
+  <div class="container mt-4">
+    <div class="row text-center">
+
+      <div class="col-md-4 mb-4">
+        <img src="kay beuty.jpeg" class="img-fluid rounded shadow" alt="Mountain">
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <img src="lakme.jpeg" class="img-fluid rounded shadow" alt="Moon and Earth">
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <img src="maybelline.jpeg" class="img-fluid rounded shadow" alt="Leaves">
+      </div>
+
+    </div>
+  </div>
+
+
+
+<!-- Shop By Category Section -->
+<section class="py-5 text-center" style="background: linear-gradient(to bottom, #ffcce6, #fff8f9);">
+  <h2 class="fw-bold text-uppercase mb-4" style="color: #e91e63;">✨ Shop By Category ✨</h2>
+  
+  <div class="container">
+    <div class="row justify-content-center g-4">
+      
+      <!-- Makeup Card -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm p-3" style="border-radius: 20px;">
+          <img src="image 1.jpg" class="card-img-top rounded-circle" alt="Makeup">
+          <div class="card-body">
+            <h5 class="card-title fw-semibold text-center" style="color: #e91e63;">Makeup</h5>
+            <div class="text-center">
+              <button class="btn btn-pink rounded-circle">
+                <span class="fs-4">&#8594;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skincare Card -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm p-3" style="border-radius: 20px;">
+          <img src="SKINCARE.jpg" class="card-img-top rounded-circle" alt="Skincare">
+          <div class="card-body">
+            <h5 class="card-title fw-semibold text-center" style="color: #e91e63;">Skincare</h5>
+            <div class="text-center">
+              <button class="btn btn-pink rounded-circle">
+                <span class="fs-4">&#8594;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Haircare Card -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-sm p-3" style="border-radius: 20px;">
+          <img src="pexels-element5-973401.jpg" class="card-img-top rounded-circle" alt="Haircare">
+          <div class="card-body">
+            <h5 class="card-title fw-semibold text-center" style="color: #e91e63;">Haircare</h5>
+            <div class="text-center">
+              <button class="btn btn-pink rounded-circle">
+                <span class="fs-4">&#8594;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="category-section">
+  <h2>Looking for inspiration?</h2>
+  <p>See what’s trending now.</p>
+  <hr style="border-color:#ddd; margin-bottom: 1rem;">
+
+  <div class="category-scroll">
+    <div class="category-card" style="background: linear-gradient(to top right, #ffe5ec, #ffd6d6);">
+      <img src="lipstick.jpeg" alt="Lips">
+      <div class="title">Lips</div>
+      <div class="arrow">➜</div>
+    </div>
+    
+    <div class="category-card" style="background: linear-gradient(to top right, #ffc9d9, #ffebee);">
+      <img src="lipbalm.jpeg" alt="Lip Balm">
+      <div class="title">Lip Balm</div>
+      <div class="arrow">➜</div>
+    </div>
+    
+    <div class="category-card" style="background: linear-gradient(to top right, #d7f1ff, #eef9ff);">
+      <img src="shampoo.jpeg" alt="Shampoo">
+      <div class="title">Shampoo</div>
+      <div class="arrow">➜</div>
+    </div>
+    
+    <div class="category-card" style="background: linear-gradient(to top right, #eaffdd, #f4fff0);">
+      <img src="facewash.jpeg" alt="Face Wash">
+      <div class="title">Face Wash</div>
+      <div class="arrow">➜</div>
+    </div>
+    
+    <div class="category-card" style="background: linear-gradient(to top right, #f5f5f5, #eaeaea);">
+      <img src="kajal.jpeg" alt="Kajal">
+      <div class="title">Kajal</div>
+      <div class="arrow">➜</div>
+    </div>
+    
+    <div class="category-card" style="background: linear-gradient(to top right, #f0e8ff, #f7f0ff);">
+      <img src="serum.jpeg" alt="Serums">
+      <div class="title">Serums & Essence</div>
+      <div class="arrow">➜</div>
+    </div>
+    
+    <div class="category-card" style="background: linear-gradient(to top right, #ffe9cc, #fff0e6);">
+      <img src="moisturiser.jpeg" alt="Moisturizer">
+      <div class="title">Face Moisturizer & Day Cream</div>
+      <div class="arrow">➜</div>
+    </div>
+    
+    <div class="category-card" style="background: linear-gradient(to top right, #dcfaff, #ebfbff);">
+      <img src="bodywash.jpeg" alt="Shower Gel">
+      <div class="title">Shower Gels & Body Wash</div>
+      <div class="arrow">➜</div>
+    </div>
+    
+    <div class="category-card" style="background: linear-gradient(to top right, #fff3b0, #fffde6);">
+      <img src="sunscreen.jpeg" alt="Sunscreen">
+      <div class="title">Suncare</div>
+      <div class="arrow">➜</div>
+    </div>
+  </div>
+</section>
+
+<form action="/order" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <select name="product">
+        <option value="Lipstick">Lipstick</option>
+        <option value="Foundation">Foundation</option>
+        <option value="Eyeliner">Eyeliner</option>
+    </select>
+    <input type="number" name="quantity" placeholder="Quantity" min="1" required>
+    <button type="submit">Place Order</button>
+</form>
+
+
+</body>
+</html>    
